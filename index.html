@@ -3,69 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Ohmyfood</title>
+    <title>Omyfood</title>
+    <link rel="stylesheet" href="assets/style.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <div class="header-icon"></div>
-        <h1 class="header-title">Ohmyfood</h1>
+        <div class="logo">
+            <img src="assets/images/logo/ohmyfood.png" alt="ohmyfood">
+        </div>
+        <div class="location"><i class="fa-solid fa-location-dot"></i>Paris, Belleville</div>
     </header>
 
-    <section class="location">
-        <div class="location-icon"></div>
-        <span class="location-text">New York, Brooklyn</span>
-    </section>
-
     <section class="hero">
-        <h2 class="hero-title">Réservez le menu qui vous convient</h2>
-        <p class="hero-subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="hero-button">Explorer nos restaurants</button>
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button class="btn-brimary">Explorer nos restaurants</button>
     </section>
 
     <section class="fonctionnement">
-        <h2 class="fonctionnement-title">Fonctionnement</h2>
-        <div class="fonctionnement-steps">
+        <h2>Fonctionnement</h2>
+        <div class="steps">
             <div class="step">
-                <div class="step-icon">1</div>
-                <p class="step-text">Choisissez un restaurant</p>
+                <span class="icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                <p>Choisissez un restaurant</p>
             </div>
             <div class="step">
-                <div claass="step-icon">2</div>
-                <p class="step-text">Dégustez au restaurant</p>
+                <span class="icon"><i class="fa-solid fa-list-ul"></i></span>
+                <p>Composez votre menu</p>
+            </div>
+            <div class="step">
+                <span class="icon"><i class="fa-solid fa-store"></i></span>
+                <p>Dégustez au restaurant</p>
             </div>
         </div>
     </section>
 
     <section class="restaurants">
-        <h2 class="restaurants-title">Restaurants</h2>
-        <div class="restaurants-cards">
-            <div class="card">
-                <img src="restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant" class="card-image">
-                <h3 class="card-title">La palette du goût</h3>
+        <h2>Restaurants</h2>
+        <div class="restaurant-list">
+            <div class="restaurant">
+                <div class="restaurant-header">
+                    <img src="restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La palette du goût">
+                    <span class="badge">Nouveau</span>
+                </div>
+                <div class="restaurant-info">
+                    <h3>La palette du goût</h3>
+                    <p>Montmartre</p>
+                    <button class="btn-secondary">Réserver</button>
+                </div>
             </div>
-            <div class="card">
-                <img src="restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant" class="card-image">
-                <h3 class="card-title">La mote enchantée</h3>
+
+            <div class="restaurant">
+                <div class="restaurant-header">
+                    <img src="restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La note enchantée">
+                </div>
+                <div class="restaurant-info">
+                    <h3>La note enchantée</h3>
+                    <p>Chavotte</p>
+                    <button class="btn-favorite">Réserver</button>
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <div class="restaurant-header">
+                    <img src="restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="A la frangine">
+                </div>
+                <div class="restaurant-info">
+                    <h3>A la frangine</h3>
+                    <p>Cité Rouge</p>
+                    <button class="btn-favorite">Réserver</button>
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <div class="restaurant-header">
+                    <img src="restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Le délice des sens">
+                </div>
+                <div class="restaurant-info">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                    <button class="btn-favorite">Réserver</button>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-link">
-                <a href="#" class="footer-link">Proposer un restaurant</a>
-                <a href="#" class="footer-link">Devenir partenaire</a>
-            </div>
-            <div class="footer-info">
-                <a href="#" class="footer-info-item">Mentions légales</a>
-                <a href="#" class="footer-info-item">Contact</a>
-            </div>
-            <div class="footer-logo">
-                <span class="footer-brand">Ohmyfood</span>
-            </div>
-        </div>
+        <p>ohmyfood</p>
+        <p><a href="#">Proposer un restaurant</a> | <a href="#">Devenir partenaire</a></p>
+        <p><a href="#">Mentions légales</a> | <a href="#">Contact</a></p>
     </footer>
-    
 </body>
 </html>
