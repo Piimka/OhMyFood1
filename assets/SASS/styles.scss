@@ -1,6 +1,7 @@
 @use 'header';
 @use 'menu';
 @use 'fonctionnement';
+@use 'restaurants';
 
 /* Reset CSS */
 
@@ -172,6 +173,115 @@ body {
             font-size: 16px;
             font-weight: 500;
             color: fonctionnement.$black;
+        }
+    }
+}
+
+/* Restaurants */
+
+.restaurants {
+    background-color: restaurants.$background-color;
+    padding: 20px;
+    max-width: 375px;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #000000;
+    }
+
+    .restaurant-card {
+        background-color: restaurants.$card-background;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .badge-new {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #99E2D0;
+            color: #008766;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 5px;
+            padding: 5px 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            p {
+                font-size: 14px;
+                color: restaurants.$grey-color;
+                margin: 5px 0 0;
+            }
+
+            .heart-button {
+                position: relative;
+                font-size: 24px;
+                cursor: pointer;
+
+                input {
+                    display: none;
+                }
+
+                .fa-regular {
+                    color: restaurants.$grey-color;
+                    transition: opacity 0.3s ease-in-out;
+                }
+
+                .fa-solid.heart-filled {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: restaurants.$color-gradient-hover;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+                    transform: scale(0);
+                }
+
+                &:hover .fa-solid.heart-filled {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+
+                &:hover .fa-regular {
+                    opacity: 0;
+                }
+
+                input:checked + .fa-regular {
+                    opacity: 0;
+                }
+
+                input:checked ~ .fa-solid.heart-filled {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
         }
     }
 }

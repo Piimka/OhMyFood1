@@ -154,4 +154,97 @@ body {
   color: #000000;
 }
 
+/* Restaurants */
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 20px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+.restaurants h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.restaurants .restaurant-card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+.restaurants .restaurant-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.restaurants .restaurant-card .badge-new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #99E2D0;
+  color: #008766;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.restaurants .restaurant-card .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.restaurants .restaurant-card .card-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.restaurants .restaurant-card .card-content p {
+  font-size: 14px;
+  color: #7E7E7E;
+  margin: 5px 0 0;
+}
+.restaurants .restaurant-card .card-content .heart-button {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+}
+.restaurants .restaurant-card .card-content .heart-button input {
+  display: none;
+}
+.restaurants .restaurant-card .card-content .heart-button .fa-regular {
+  color: #7E7E7E;
+  transition: opacity 0.3s ease-in-out;
+}
+.restaurants .restaurant-card .card-content .heart-button .fa-solid.heart-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #FF92E0, #A065E6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: scale(0);
+}
+.restaurants .restaurant-card .card-content .heart-button:hover .fa-solid.heart-filled {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.restaurants .restaurant-card .card-content .heart-button:hover .fa-regular {
+  opacity: 0;
+}
+.restaurants .restaurant-card .card-content .heart-button input:checked + .fa-regular {
+  opacity: 0;
+}
+.restaurants .restaurant-card .card-content .heart-button input:checked ~ .fa-solid.heart-filled {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /*# sourceMappingURL=styles.css.map */
