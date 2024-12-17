@@ -285,3 +285,58 @@ body {
         }
     }
 }
+
+/* Footer */ 
+
+.footer {
+    background: #353535;
+    color: #FFFFFF;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &-logo {
+        img {
+            width: 139px;
+            height: auto;
+            display: block;
+            filter: invert(1) brightness(1000%);
+        }
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                color: #FFFFFF;
+                font-size: 16px;
+            }
+
+            a {
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .footer-text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+}
