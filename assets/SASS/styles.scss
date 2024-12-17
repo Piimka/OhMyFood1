@@ -1,4 +1,5 @@
 @use 'header';
+@use 'menu';
 
 /* Reset CSS */
 
@@ -56,5 +57,58 @@ body {
         font-weight: 500;
         font-size: 14px;
         color: header.$color-grey;
+    }
+}
+
+/* Menu */
+
+.menu {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background: #F6F6F6;
+
+    &-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: menu.$black;
+        margin-bottom: 10px;
+    }
+
+    &-description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: menu.$color-grey;
+        margin-bottom: 20px;
+    }
+
+    &-button {
+        width: 218px;
+        height: 50px;
+        margin: 0 auto;
+        display: block;
+        background: menu.$color-gradient;
+        border: none;
+        border-radius: 25px;
+        box-shadow: menu.$shadow-button;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: menu.$color-white;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        span {
+            display: inline-block;
+        }
+
+        &:hover {
+            opacity: 0.9;
+            background: menu.$color-gradient-hover;
+            box-shadow: menu.$shadow-hover;
+        }
     }
 }
